@@ -1,5 +1,6 @@
 
 from fastapi import FastAPI, File, UploadFile, Request
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from PIL import Image
 import pytesseract
@@ -9,7 +10,17 @@ import httpx
 import json
 from dotenv import load_dotenv
 
+
 app = FastAPI()
+
+# Add CORS middleware for development (allow all origins, methods, headers)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 # Load environment variables from .env file
