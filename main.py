@@ -1,17 +1,20 @@
-from fastapi import FastAPI, File, UploadFile
+
+from fastapi import FastAPI, File, UploadFile, Request
 from fastapi.responses import JSONResponse
 from PIL import Image
 import pytesseract
 import io
-import os 
-from fastapi import FastAPI, Request
-from fastapi.responses import JSONResponse
 import os
 import httpx
 import json
+from dotenv import load_dotenv
+
 app = FastAPI()
 
-GROQ_API_KEY = "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"
+
+# Load environment variables from .env file
+load_dotenv()
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 # Define your prompt template
 def build_prompt(expenses):
