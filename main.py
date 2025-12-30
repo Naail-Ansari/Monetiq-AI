@@ -22,6 +22,26 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# To restrict CORS to specific domains, use:
+# app.add_middleware(
+#     CORSMiddleware,
+#     allow_origins=[
+#         "http://localhost:3000",
+#         "http://localhost:5173",
+#         "https://monetiq-frontend.netlify.app"
+#     ],
+#     allow_credentials=True,
+#     allow_methods=["*"],
+#     allow_headers=["*"],
+# )
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Change to specific domains in production
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 # Load environment variables from .env file
 load_dotenv()
