@@ -5,10 +5,10 @@ pycache/
 *.pyd
 .Python
 build/
-develop-eggs/
-dist/
-downloads/
-eggs/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
 .git/
-*.egg-info/
 *.egg
