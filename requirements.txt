@@ -1,4 +1,3 @@
-fastapi
 uvicorn
 pytesseract
 pillow
@@ -14,6 +13,15 @@ pytesseract
 httpx
 Pillow
 python-dotenv
+python-multipart
+transformers
+torch
+
+fastapi
+uvicorn
+pytesseract
+pillow
+httpx
 python-multipart
 transformers
 torch
