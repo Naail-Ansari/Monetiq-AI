@@ -1,3 +1,10 @@
+uvicorn
+pytesseract
+pillow
+httpx
+python-multipart
+transformers
+torch
 fastapi
 uvicorn
 pytesseract
@@ -6,3 +13,4 @@ httpx
 python-multipart
 transformers
 torch
+python-dotenv
