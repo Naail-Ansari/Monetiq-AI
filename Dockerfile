@@ -1,8 +1,7 @@
 FROM python:3.10-slim
 
-RUN apt-get update && \
-    apt-get install -y tesseract-ocr libtesseract-dev libleptonica-dev && \
-    apt-get clean
+# Install Tesseract OCR system-wide
+RUN apt-get update && apt-get install -y tesseract-ocr && apt-get clean
 
 WORKDIR /app
 
